@@ -1,0 +1,217 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#f1f2f6;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+
+  width:100%;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:15px 25px;
+
+  background:rgb(250, 172, 28);
+
+  color:black;
+
+  position:sticky;
+
+  top:0;
+
+  z-index:1000;
+
+  border-bottom:2px solid black;
+
+  box-shadow:
+    0 2px 10px
+    rgba(0,0,0,0.1);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo{
+
+  font-size:24px;
+
+  font-weight:bold;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box{
+
+  width:260px;
+
+  padding:10px;
+
+  border:none;
+
+  border:2px solid black;
+
+  border-radius:8px;
+
+  outline:none;
+
+  font-size:14px;
+
+  transition:0.3s;
+}
+
+/* FOCUS */
+
+.search-box:focus{
+
+  border-color:white;
+
+  box-shadow:
+    0 0 5px
+    rgba(255,255,255,0.7);
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.nav-links{
+
+  display:flex;
+
+  gap:20px;
+}
+
+.nav-links a{
+
+  color:black;
+
+  text-decoration:none;
+
+  font-size:20px;
+
+  font-weight:500;
+
+  transition:0.3s;
+}
+
+/* HOVER */
+
+.nav-links a:hover{
+
+  color:white;
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-btn{
+
+  display:none;
+
+  font-size:28px;
+
+  cursor:pointer;
+
+  user-select:none;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+  .navbar{
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    padding:15px;
+  }
+
+  /* SEARCH */
+
+  .search-box{
+
+    width:100%;
+
+    order:3;
+  }
+
+  /* MENU BUTTON */
+
+  .menu-btn{
+
+    display:block;
+  }
+
+  /* MOBILE LINKS */
+
+  .nav-links{
+
+    position:absolute;
+
+    top:70px;
+
+    right:0;
+
+    background:white;
+
+    width:220px;
+
+    flex-direction:column;
+
+    padding:20px;
+
+    display:none;
+
+    box-shadow:
+      0 2px 10px
+      rgba(0,0,0,0.2);
+
+    border-radius:
+      0 0 10px 10px;
+  }
+
+  /* ACTIVE MENU */
+
+  .nav-links.active{
+
+    display:flex;
+  }
+
+  /* MOBILE LINK */
+
+  .nav-links a{
+
+    color:black;
+
+    font-size:18px;
+  }
+
+  .nav-links a:hover{
+
+    color:orange;
+  }
+}
+

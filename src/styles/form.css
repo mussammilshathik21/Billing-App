@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-add {
+  background: #44bd32;
+  color: white;
+}
